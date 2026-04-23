@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treehouse Afriq — Daniel Chidera</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <nav id="desktop-nav">
+    <div class="logo">Daniel Chidera</div>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Daniel Chidera</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <main class="project-page">
+
+    <a href="index.html#projects" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+    <div class="project-hero">
+      <img src="./assets/treehouse-preview.jpg"
+        onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=500&fit=crop'"
+        alt="Treehouse Afriq Restaurant Website" class="project-hero-img" />
+    </div>
+
+    <div class="project-content">
+
+      <div class="project-header">
+        <h1>Treehouse Afriq — Restaurant Website</h1>
+        <div class="project-tech">
+          <span class="tech-tag">HTML5</span>
+          <span class="tech-tag">CSS3</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="project-section">
+        <h2>Overview</h2>
+        <p>Treehouse Afriq is a restaurant based in Port Harcourt, Nigeria. I built their full website to give the brand a professional online presence and make it easy for customers to explore their menu, learn about the restaurant, and get in touch directly.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>The Problem It Solves</h2>
+        <p>Without a website, restaurants in Port Harcourt rely solely on social media and word of mouth — which limits their reach and makes it hard for new customers to find reliable information. A dedicated website gives Treehouse Afriq a credible, permanent home on the internet where customers can always find them.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>Key Features</h2>
+        <ul class="project-list">
+          <li>Restaurant homepage with strong brand identity and visuals</li>
+          <li>Menu showcase displaying the restaurant's offerings</li>
+          <li>About section telling the story of the brand</li>
+          <li>Contact section with location and inquiry options</li>
+          <li>Fully responsive design optimised for mobile users</li>
+        </ul>
+      </div>
+
+      <div class="project-section">
+        <h2>How I Built It</h2>
+        <p>The site was built with HTML, CSS and JavaScript. I focused on warm visuals, clean layout and smooth navigation to reflect the restaurant's brand and create an inviting experience for visitors. The design was built mobile-first since most customers in Port Harcourt browse on their phones.</p>
+      </div>
+
+      <div class="project-section">
+        <h2>My Role</h2>
+        <p>I was the sole developer on this project — handling everything from design and development to final delivery for the client. This was a real client project built for an actual business in Port Harcourt.</p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#experience">Experience</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2025 Daniel Chidera. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

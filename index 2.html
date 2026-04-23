@@ -83,12 +83,14 @@
               <strong>500+ Clients With<br>Positive Reviews</strong>
             </div>
           </div>
+
           <div class="strip-center fade-up delay-2">
             <div class="strip-badge-circle">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <span style="top:auto;bottom:10px">Farm Fresh</span>
             </div>
           </div>
+
           <div class="strip-right fade-up delay-3">
             <strong>Healthy Life With<br>Fresh Products</strong>
             <div class="strip-video-thumb">
@@ -102,85 +104,57 @@
       </div>
     </section>
 
-    <section class="slider-section bg-white">
+    <section class="services">
       <div class="container">
-        <div class="slider-head">
-          <div class="slider-head-left">
+        <div class="services-head">
+          <div class="services-head-left">
             <span class="section-label fade-up">Our Services</span>
             <h2 class="section-title fade-up delay-1">We Offer Fresh &amp; Natural<br>Livestock Products</h2>
           </div>
-          <div class="slider-controls fade-up delay-2">
-            <button class="slider-btn prev" id="services-prev" aria-label="Previous">
+          <div class="services-nav fade-up delay-2">
+            <button class="services-nav-btn" aria-label="Previous">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
-            <span class="slider-counter" id="services-counter"><span>1</span> / 3</span>
-            <button class="slider-btn next" id="services-next" aria-label="Next">
+            <button class="services-nav-btn" aria-label="Next">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
             </button>
           </div>
         </div>
 
-        <div class="slider-viewport">
-          <div class="slider-track" id="services-track">
+        <div class="services-grid">
+          <a href="products.html?category=fish" class="service-card fade-up delay-1">
+            <div class="service-card-img">
+              <img src="assets/images/catfish.jpeg" alt="Fish Farming" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">Fish Farming</span>
+              <h3>Fresh Catfish &amp; Tilapia</h3>
+              <p>Farm-raised in clean managed ponds. Rich in protein and available all year round for families and businesses.</p>
+            </div>
+          </a>
 
-            <a href="products.html?category=piggery" class="service-card">
-              <div class="service-card-img">
-                <img src="assets/images/pig treatment.jpeg" alt="Pig Treatments" loading="lazy" onerror="this.remove()">
-              </div>
-              <div class="service-card-body">
-                <span class="service-tag">Piggery</span>
-                <h3>Pig Treatments</h3>
-                <p>Professional health management and treatment plans for pigs — keeping your herd healthy, growing, and thriving year-round.</p>
-              </div>
-            </a>
+          <a href="products.html?category=poultry" class="service-card fade-up delay-2">
+            <div class="service-card-img">
+              <img src="assets/images/broiler.jpeg" alt="Poultry" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">Poultry</span>
+              <h3>Broiler Chickens &amp; Eggs</h3>
+              <p>Healthy broilers and fresh eggs raised in airy, hygienic conditions. Consistent quality every order.</p>
+            </div>
+          </a>
 
-            <a href="products.html?category=fish" class="service-card">
-              <div class="service-card-img">
-                <img src="assets/images/fish treatment.jpeg" alt="Fish Treatment" loading="lazy" onerror="this.remove()">
-              </div>
-              <div class="service-card-body">
-                <span class="service-tag">Fish Farming</span>
-                <h3>Fish Treatment</h3>
-                <p>Pond management, water quality control, and fish health treatment services for catfish and tilapia farmers.</p>
-              </div>
-            </a>
-
-            <a href="contact.html" class="service-card">
-              <div class="service-card-img">
-                <img src="assets/images/farm setup.jpeg" alt="Farm Setups" loading="lazy" onerror="this.remove()">
-              </div>
-              <div class="service-card-body">
-                <span class="service-tag">Consultation</span>
-                <h3>Farm Setups</h3>
-                <p>End-to-end farm setup consultations — from pen design and pond construction to feed systems and equipment sourcing.</p>
-              </div>
-            </a>
-
-            <a href="products.html?category=poultry" class="service-card">
-              <div class="service-card-img">
-                <img src="assets/images/broiler setup.jpeg" alt="Broiler Setup" loading="lazy" onerror="this.remove()">
-              </div>
-              <div class="service-card-body">
-                <span class="service-tag">Poultry</span>
-                <h3>Broiler Setup</h3>
-                <p>Complete broiler farming setup — housing design, ventilation, feeding systems, and starter stock to get your operation running.</p>
-              </div>
-            </a>
-
-            <a href="products.html?category=poultry" class="service-card">
-              <div class="service-card-img">
-                <img src="assets/images/broiler treatment.jpeg" alt="Broiler Treatments" loading="lazy" onerror="this.remove()">
-              </div>
-              <div class="service-card-body">
-                <span class="service-tag">Poultry Health</span>
-                <h3>Broiler Treatments</h3>
-                <p>Vaccination programmes, disease management, and routine health checks to keep your broiler flock productive and healthy.</p>
-              </div>
-            </a>
-
-          </div>
+          <a href="products.html?category=piggery" class="service-card fade-up delay-3">
+            <div class="service-card-img">
+              <img src="assets/images/pig.jpeg" alt="Piggery" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="service-card-body">
+              <span class="service-tag">Piggery</span>
+              <h3>Quality Pork &amp; Live Pigs</h3>
+              <p>Well-nourished pigs on quality feed. Available live or as fresh pork cuts — order in advance.</p>
+            </div>
+          </a>
         </div>
-        <div class="slider-dots" id="services-dots"></div>
       </div>
     </section>
 
@@ -193,10 +167,12 @@
             </div>
             <div class="about-exp-badge">5+ Years of Experience In Livestock Farming</div>
           </div>
+
           <div class="about-right fade-right">
             <span class="section-label">About Us</span>
             <h2 class="section-title">We're the Best Livestock &amp; Agriculture Farm in PHC</h2>
             <p>We believe in responsible farming that prioritises the health of our animals and our customers. From our farm in Port Harcourt, we deliver fresh, honest products direct to you.</p>
+
             <div class="about-checklist">
               <div class="about-check-item">
                 <div class="about-check-icon">
@@ -217,12 +193,14 @@
                 </div>
               </div>
             </div>
+
             <a href="contact.html" class="btn-hero-primary" style="width:fit-content">
               Discover More
               <span class="btn-circle-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </span>
             </a>
+
             <div class="about-image-second">
               <img src="assets/images/man holding fingerling.jpeg" alt="Farm overview" loading="lazy" onerror="this.parentElement.style.background='#2d6a4f'">
             </div>
@@ -231,29 +209,16 @@
       </div>
     </section>
 
-    <section class="slider-section bg-white">
+    <section class="featured">
       <div class="container">
-        <div class="slider-head">
-          <div class="slider-head-left">
+        <div class="featured-head">
+          <div class="featured-head-left">
             <span class="section-label fade-up">Top Products</span>
             <h2 class="section-title fade-up delay-1">Our Best Selling Products</h2>
           </div>
-          <div class="slider-controls fade-up delay-2">
-            <button class="slider-btn prev" id="products-prev" aria-label="Previous">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <span class="slider-counter" id="products-counter"><span>1</span> / 3</span>
-            <button class="slider-btn next" id="products-next" aria-label="Next">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
-          </div>
+          <a href="products.html" class="btn-hero-outline fade-up delay-2" style="color:var(--green-mid);border-color:var(--green-mid)">See All Products</a>
         </div>
-
-        <div class="slider-viewport">
-          <div class="slider-track" id="products-track"></div>
-        </div>
-        <div class="slider-dots" id="products-dots"></div>
-
+        <div class="products-grid" id="featured-grid"></div>
         <div class="featured-cta fade-up">
           <a href="products.html" class="btn-hero-primary">
             See All Products
@@ -314,100 +279,75 @@
       </div>
     </section>
 
-    <section class="slider-section bg-white">
+    <section class="testimonials">
       <div class="container">
-        <div class="slider-head">
-          <div class="slider-head-left">
+        <div class="testimonials-head">
+          <div class="testimonials-head-left">
             <span class="section-label fade-up">Happy Customers</span>
             <h2 class="section-title fade-up delay-1">Trusted By 500+ Customers</h2>
           </div>
-          <div class="slider-controls fade-up delay-2">
-            <div class="testi-rating" style="text-align:right;margin-right:12px">
-              <div class="testi-stars-row">
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                <strong style="font-size:1.1rem;font-family:var(--font-head);margin-left:6px;color:var(--text-dark)">4.9</strong>
-              </div>
-              <span style="font-size:0.78rem;color:var(--text-muted)">From 500+ ratings</span>
+          <div class="testi-rating fade-up delay-2">
+            <div class="testi-stars-row">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <strong style="font-size:1.3rem;font-family:var(--font-head);margin-left:6px">4.9</strong>
             </div>
-            <button class="slider-btn prev" id="testi-prev" aria-label="Previous">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-            </button>
-            <button class="slider-btn next" id="testi-next" aria-label="Next">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-            </button>
+            <span>From 500+ ratings</span>
           </div>
         </div>
 
-        <div class="slider-viewport">
-          <div class="slider-track" id="testi-track">
-
-            <div class="testi-card">
-              <p>"The catfish was incredibly fresh — you could tell it came straight from the pond. My family loved the pepper soup we made. Will definitely order again."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#2d6a4f">CA
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="testi-grid">
+          <div class="testi-card fade-up delay-1">
+            <p>"The catfish was incredibly fresh — you could tell it came straight from the pond. My family loved the pepper soup we made. Will definitely order again and again."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#2d6a4f">
+                CA
+                <div class="testi-avatar-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <div class="testi-info"><strong>Customer A</strong><span>Port Harcourt</span></div>
+              </div>
+              <div class="testi-info">
+                <strong>Customer A</strong>
+                <span>Customer</span>
               </div>
             </div>
+          </div>
 
-            <div class="testi-card">
-              <p>"I've been sourcing broiler chickens from Mary's Farm for my restaurant for months. Quality is consistent, price is fair, and they always deliver on time."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#52b788">BR
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="testi-card fade-up delay-2">
+            <p>"I've been sourcing broiler chickens from Mary's Farm for my restaurant for months. Quality is consistent, price is fair, and they always deliver on time."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#52b788">
+                BR
+                <div class="testi-avatar-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <div class="testi-info"><strong>Buyer from Rivers</strong><span>GRA, Port Harcourt</span></div>
+              </div>
+              <div class="testi-info">
+                <strong>Buyer from Rivers</strong>
+                <span>Customer</span>
               </div>
             </div>
+          </div>
 
-            <div class="testi-card">
-              <p>"I buy maggot meal for my fish farm. The difference in fish growth has been very noticeable. Great product and wonderful people. Highly recommend."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#7c5c3e">LF
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="testi-card fade-up delay-3">
+            <p>"I buy maggot meal as feed for my fish farm. The difference in growth has been very noticeable. Great product, great people. Highly recommend to any fish farmer."</p>
+            <div class="testi-author">
+              <div class="testi-avatar" style="background:#7c5c3e">
+                LF
+                <div class="testi-avatar-badge">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
-                <div class="testi-info"><strong>Local Farmer</strong><span>Rumuola, Rivers State</span></div>
+              </div>
+              <div class="testi-info">
+                <strong>Local Farmer</strong>
+                <span>Founder, Fish Farm PHC</span>
               </div>
             </div>
-
-            <div class="testi-card">
-              <p>"Ordered pork cuts for a family event and was blown away by the quality. Delivered on time, properly packaged. We will definitely be ordering again soon."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#2d6a4f">TC
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                </div>
-                <div class="testi-info"><strong>Tina C.</strong><span>Woji, Port Harcourt</span></div>
-              </div>
-            </div>
-
-            <div class="testi-card">
-              <p>"Their farm setup consultation helped me launch my own fish pond. The team was professional, knowledgeable, and genuinely invested in my success."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#1a3c2e">KO
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                </div>
-                <div class="testi-info"><strong>Kelechi O.</strong><span>Eleme, Rivers State</span></div>
-              </div>
-            </div>
-
-            <div class="testi-card">
-              <p>"Fresh eggs every week without fail. The yolks are rich and golden — clearly raised on good feed. My kids notice the difference. Best farm in Port Harcourt."</p>
-              <div class="testi-author">
-                <div class="testi-avatar" style="background:#52b788">EM
-                  <div class="testi-avatar-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                </div>
-                <div class="testi-info"><strong>Emeka M.</strong><span>D/Line, Port Harcourt</span></div>
-              </div>
-            </div>
-
           </div>
         </div>
-        <div class="slider-dots" id="testi-dots"></div>
       </div>
     </section>
 
@@ -432,38 +372,50 @@
           <div class="faq-right fade-right">
             <span class="section-label">Frequently Asked Questions</span>
             <h2 class="section-title">How Can We Help You?</h2>
+
             <div class="faq-list">
               <div class="faq-item open">
                 <button class="faq-question">
                   What types of livestock do you sell?
-                  <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </span>
                 </button>
                 <div class="faq-answer">
                   <p>We sell fresh catfish, tilapia, broiler chickens, farm eggs, live pigs, pork cuts, black soldier fly larvae, and dried maggot meal — all raised on our farm in Port Harcourt.</p>
                 </div>
               </div>
+
               <div class="faq-item">
                 <button class="faq-question">
                   How can I purchase your products?
-                  <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </span>
                 </button>
                 <div class="faq-answer">
                   <p>You can order directly through this website or reach us on WhatsApp. For bulk orders, contact us in advance and we'll arrange everything for you.</p>
                 </div>
               </div>
+
               <div class="faq-item">
                 <button class="faq-question">
                   Do you deliver within Port Harcourt?
-                  <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </span>
                 </button>
                 <div class="faq-answer">
                   <p>Yes, we deliver within Port Harcourt and surrounding areas in Rivers State. Delivery fees may apply depending on your location. Contact us for details.</p>
                 </div>
               </div>
+
               <div class="faq-item">
                 <button class="faq-question">
                   How fresh are your products?
-                  <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+                  <span class="faq-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </span>
                 </button>
                 <div class="faq-answer">
                   <p>All products are sourced directly from our farm and handled the same day of delivery. We do not use middlemen or storage warehouses — what you get is always fresh.</p>
@@ -488,7 +440,9 @@
               <p>Mon – Sat: 08:00 to 18:00</p>
             </div>
           </div>
+
           <div class="contact-strip-divider"></div>
+
           <div class="contact-strip-item fade-up delay-2">
             <div class="contact-strip-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -498,7 +452,9 @@
               <a href="mailto:hello@marysfarm.ng">hello@marysfarm.ng</a>
             </div>
           </div>
+
           <div class="contact-strip-divider"></div>
+
           <div class="contact-strip-item fade-up delay-3">
             <div class="contact-strip-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
