@@ -1,24 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  /* ─────────────────────────────────────────────────
-     SLIDER ENGINE
-     Works on desktop (click arrows) and mobile (touch/drag)
-     Each slider is independent — pass its config object.
-  ───────────────────────────────────────────────── */
   function initSlider(config) {
-    var track     = document.getElementById(config.trackId);
-    var prevBtn   = document.getElementById(config.prevId);
-    var nextBtn   = document.getElementById(config.nextId);
-    var dotsWrap  = document.getElementById(config.dotsId);
-    var counter   = document.getElementById(config.counterId);
+    var track = document.getElementById(config.trackId);
+    var prevBtn = document.getElementById(config.prevId);
+    var nextBtn = document.getElementById(config.nextId);
+    var dotsWrap = document.getElementById(config.dotsId);
+    var counter = document.getElementById(config.counterId);
 
     if (!track) return;
 
-    var current   = 0;
+    var current = 0;
     var isDragging = false;
-    var startX    = 0;
+    var startX = 0;
     var dragDelta = 0;
-    var visibleCount = getVisible();
 
     function getVisible() {
       var w = window.innerWidth;
@@ -32,22 +26,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function maxIndex() {
-      return Math.max(0, totalItems() - visibleCount);
+      return Math.max(0, totalItems() - getVisible());
     }
 
-    function cardWidth() {
+    function getCardWidth() {
       if (totalItems() === 0) return 0;
       var gap = parseInt(getComputedStyle(track).gap) || 20;
       var vpWidth = track.parentElement.offsetWidth;
-      return (vpWidth - gap * (visibleCount - 1)) / visibleCount;
+      return (vpWidth - gap * (getVisible() - 1)) / getVisible();
+    }
+
+    function setCardSizes() {
+      var cw = getCardWidth();
+      Array.from(track.children).forEach(function (card) {
+        card.style.flex = '0 0 ' + cw + 'px';
+        card.style.width = cw + 'px';
+        card.style.maxWidth = cw + 'px';
+        card.style.boxSizing = 'border-box';
+      });
     }
 
     function goTo(index) {
       current = Math.max(0, Math.min(index, maxIndex()));
-      var cw   = cardWidth();
-      var gap  = parseInt(getComputedStyle(track).gap) || 20;
-      var offset = current * (cw + gap);
-      track.style.transform = 'translateX(-' + offset + 'px)';
+      var cw = getCardWidth();
+      var gap = parseInt(getComputedStyle(track).gap) || 20;
+      track.style.transform = 'translateX(-' + (current * (cw + gap)) + 'px)';
       updateUI();
     }
 
@@ -56,12 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (nextBtn) nextBtn.disabled = current >= maxIndex();
 
       if (counter) {
-        counter.innerHTML = '<span>' + (current + 1) + '</span> / ' + (maxIndex() + 1);
+        var span = counter.querySelector('span');
+        if (span) span.textContent = current + 1;
+        var nodes = Array.from(counter.childNodes).filter(function (n) { return n.nodeType === 3; });
+        if (nodes.length) nodes[nodes.length - 1].textContent = ' / ' + (maxIndex() + 1);
       }
 
       if (dotsWrap) {
-        var dots = dotsWrap.querySelectorAll('.slider-dot');
-        dots.forEach(function (d, i) {
+        Array.from(dotsWrap.querySelectorAll('.slider-dot')).forEach(function (d, i) {
           d.classList.toggle('active', i === current);
         });
       }
@@ -70,27 +75,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function buildDots() {
       if (!dotsWrap) return;
       dotsWrap.innerHTML = '';
-      var pages = maxIndex() + 1;
-      for (var i = 0; i < pages; i++) {
+      for (var i = 0; i < maxIndex() + 1; i++) {
         var dot = document.createElement('button');
         dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
         dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
         dot.dataset.index = i;
-        dot.addEventListener('click', function () {
-          goTo(parseInt(this.dataset.index));
-        });
+        dot.addEventListener('click', function () { goTo(parseInt(this.dataset.index)); });
         dotsWrap.appendChild(dot);
       }
     }
 
     function resize() {
-      var newVisible = getVisible();
-      if (newVisible !== visibleCount) {
-        visibleCount = newVisible;
-        current = 0;
-        buildDots();
-      }
-      goTo(current);
+      setCardSizes();
+      buildDots();
+      goTo(Math.min(current, maxIndex()));
     }
 
     if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); });
@@ -136,25 +134,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('resize', resize);
 
+    setCardSizes();
     buildDots();
     goTo(0);
   }
 
-  /* ─────────────────────────────────────────────────
-     SERVICES SLIDER
-  ───────────────────────────────────────────────── */
   initSlider({
-    trackId:   'services-track',
-    prevId:    'services-prev',
-    nextId:    'services-next',
-    dotsId:    'services-dots',
+    trackId: 'services-track',
+    prevId: 'services-prev',
+    nextId: 'services-next',
+    dotsId: 'services-dots',
     counterId: 'services-counter',
-    visible:   3
+    visible: 3
   });
 
-  /* ─────────────────────────────────────────────────
-     PRODUCTS SLIDER — loads from JSON then inits
-  ───────────────────────────────────────────────── */
+  initSlider({
+    trackId: 'testi-track',
+    prevId: 'testi-prev',
+    nextId: 'testi-next',
+    dotsId: 'testi-dots',
+    counterId: null,
+    visible: 3
+  });
+
   function formatPrice(n) {
     return '\u20a6' + n.toLocaleString('en-NG');
   }
@@ -168,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!track) return;
 
     try {
-      var res  = await fetch('data/products.json');
+      var res = await fetch('data/products.json');
       var list = await res.json();
 
       list.slice(0, 5).forEach(function (p) {
@@ -193,12 +195,12 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       initSlider({
-        trackId:   'products-track',
-        prevId:    'products-prev',
-        nextId:    'products-next',
-        dotsId:    'products-dots',
+        trackId: 'products-track',
+        prevId: 'products-prev',
+        nextId: 'products-next',
+        dotsId: 'products-dots',
         counterId: 'products-counter',
-        visible:   3
+        visible: 3
       });
 
     } catch (e) {
@@ -210,21 +212,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   loadProducts();
 
-  /* ─────────────────────────────────────────────────
-     TESTIMONIALS SLIDER
-  ───────────────────────────────────────────────── */
-  initSlider({
-    trackId:   'testi-track',
-    prevId:    'testi-prev',
-    nextId:    'testi-next',
-    dotsId:    'testi-dots',
-    counterId: null,
-    visible:   3
-  });
-
-  /* ─────────────────────────────────────────────────
-     FAQ ACCORDION
-  ───────────────────────────────────────────────── */
   var faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(function (item) {
     var btn = item.querySelector('.faq-question');
@@ -236,9 +223,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ─────────────────────────────────────────────────
-     SCROLL ANIMATIONS
-  ───────────────────────────────────────────────── */
   if ('IntersectionObserver' in window) {
     var obs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

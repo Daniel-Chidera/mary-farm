@@ -4,7 +4,7 @@
     "name": "Fresh Catfish",
     "price": 4500,
     "category": "fish",
-    "image": "assets/images/catfish.jpeg",
+    "image": "assets/images/catfish.png",
     "description": "Farm-raised fresh catfish, carefully handled and delivered same-day. Ideal for grilling, pepper soup, and local delicacies. Rich in protein and omega-3 fatty acids.",
     "stock": 80,
     "unit": "per kg"
@@ -14,7 +14,7 @@
     "name": "Tilapia Fish",
     "price": 3800,
     "category": "fish",
-    "image": "assets/images/tilapia.jpeg",
+    "image": "assets/images/tilapia.png",
     "description": "Premium quality tilapia raised in clean, well-managed ponds. Mild flavour and firm flesh — perfect for frying, grilling, or stew.",
     "stock": 60,
     "unit": "per kg"
@@ -24,7 +24,7 @@
     "name": "Broiler Chicken",
     "price": 6500,
     "category": "poultry",
-    "image": "assets/images/broiler.jpeg",
+    "image": "assets/images/broiler.png",
     "description": "Healthy, well-fed broiler chickens raised in hygienic conditions. Full-bodied and flavourful — great for every kitchen occasion.",
     "stock": 45,
     "unit": "per bird"
@@ -34,7 +34,7 @@
     "name": "Fresh Eggs (Crate)",
     "price": 5200,
     "category": "poultry",
-    "image": "assets/images/eggs.jpeg",
+    "image": "assets/images/eggs.png",
     "description": "Farm-fresh eggs from free-range layers. Packed in crates of 30. Rich yolk, strong shell, and excellent nutritional value.",
     "stock": 100,
     "unit": "per crate"
@@ -44,7 +44,7 @@
     "name": "Pork (Live Weight)",
     "price": 85000,
     "category": "piggery",
-    "image": "assets/images/pig.jpeg",
+    "image": "assets/images/pig.png",
     "description": "Healthy, well-nourished pigs raised on clean feed in a managed environment. Available for purchase live or processed on request.",
     "stock": 12,
     "unit": "per pig"
@@ -54,7 +54,7 @@
     "name": "Pork Cuts",
     "price": 7500,
     "category": "piggery",
-    "image": "assets/images/pork meat.jpeg",
+    "image": "assets/images/pork meat.png",
     "description": "Fresh pork cuts processed hygienically at our farm. Available in various portions — ribs, loin, belly, and more. Order ahead for best availability.",
     "stock": 30,
     "unit": "per kg"
@@ -64,7 +64,7 @@
     "name": "Black Soldier Fly Larvae",
     "price": 2800,
     "category": "maggot",
-    "image": "assets/images/maggot.jpeg",
+    "image": "assets/images/maggot.png",
     "description": "High-protein black soldier fly larvae — an exceptional feed supplement for poultry, fish, and livestock. Sustainably farmed and nutrient-dense.",
     "stock": 200,
     "unit": "per kg"

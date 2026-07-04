@@ -1,4 +1,3 @@
-/* ── HERO ─────────────────────────────────────────── */
 .hero {
   position: relative;
   height: 100vh;
@@ -125,7 +124,6 @@
 
 .btn-circle-icon svg { width: 13px; height: 13px; }
 
-/* ── YELLOW STATS STRIP ──────────────────────────── */
 .stats-strip {
   background: #f5c518;
   background-image: url('../images/strip-pattern.svg');
@@ -269,7 +267,6 @@
   filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4));
 }
 
-/* ── SLIDER SHARED ───────────────────────────────── */
 .slider-section {
   padding: 96px 0 80px;
 }
@@ -330,13 +327,8 @@
   color: var(--white);
 }
 
-.slider-btn.prev:hover {
-  background: var(--border);
-}
-
-.slider-btn.next:hover {
-  background: var(--green-dark);
-}
+.slider-btn.prev:hover { background: var(--border); }
+.slider-btn.next:hover { background: var(--green-dark); }
 
 .slider-btn:disabled {
   opacity: 0.35;
@@ -358,6 +350,7 @@
 .slider-viewport {
   overflow: hidden;
   border-radius: 4px;
+  width: 100%;
 }
 
 .slider-track {
@@ -398,7 +391,6 @@
   border-radius: 4px;
 }
 
-/* ── SERVICE CARDS ───────────────────────────────── */
 .service-card {
   background: var(--green-dark);
   border-radius: 18px;
@@ -409,6 +401,7 @@
   min-width: 0;
   text-decoration: none;
   display: block;
+  box-sizing: border-box;
 }
 
 .service-card:hover {
@@ -421,20 +414,24 @@
   overflow: hidden;
   position: relative;
   background: #2d6a4f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  opacity: 0.85;
+  object-fit:cover ;
+  object-position: bottom;
+  opacity: 0.92;
   transition: transform 0.5s ease, opacity 0.4s ease;
   pointer-events: none;
 }
 
 .service-card:hover .service-card-img img {
-  transform: scale(1.06);
-  opacity: 0.75;
+  transform: scale(1.04);
+  opacity: 0.80;
 }
 
 .service-card-body { padding: 20px 22px 24px; }
@@ -465,7 +462,6 @@
   line-height: 1.65;
 }
 
-/* ── ABOUT ───────────────────────────────────────── */
 .about {
   background: var(--green-dark);
   padding: 100px 0;
@@ -579,7 +575,6 @@
   object-fit: cover;
 }
 
-/* ── FEATURED PRODUCTS ──────────────────────────── */
 .product-card {
   background: var(--green-dark);
   border-radius: 18px;
@@ -588,6 +583,7 @@
   cursor: pointer;
   flex: 0 0 calc(33.333% - 14px);
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .product-card:hover {
@@ -687,7 +683,6 @@
   margin-top: 48px;
 }
 
-/* ── HOW WE WORK ─────────────────────────────────── */
 .process {
   padding: 96px 0;
   background: var(--beige);
@@ -779,7 +774,6 @@
   margin-top: 3px;
 }
 
-/* ── TESTIMONIALS ────────────────────────────────── */
 .testi-rating { text-align: right; }
 
 .testi-rating strong {
@@ -808,6 +802,7 @@
   transition: all var(--transition);
   flex: 0 0 calc(33.333% - 14px);
   min-width: 0;
+  box-sizing: border-box;
 }
 
 .testi-card:hover {
@@ -871,7 +866,6 @@
 
 .testi-info span { font-size: 0.78rem; color: var(--text-muted); }
 
-/* ── FAQ ─────────────────────────────────────────── */
 .faq {
   padding: 96px 0;
   background: var(--beige);
@@ -1004,7 +998,6 @@
 
 .faq-item.open .faq-answer { max-height: 200px; }
 
-/* ── CONTACT STRIP ───────────────────────────────── */
 .contact-strip {
   background: #f5c518;
   background-image: url('../images/strip-pattern.svg');
@@ -1064,7 +1057,6 @@
   background: rgba(26,60,46,0.18);
 }
 
-/* ── CTA SECTION ─────────────────────────────────── */
 .cta-section {
   padding: 96px 0;
   background: var(--green-dark);
@@ -1108,10 +1100,10 @@
   display: flex;
   gap: 14px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-/* ── RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 1024px) {
   .about-inner { grid-template-columns: 1fr; gap: 48px; }
   .about-exp-badge { right: 20px; }
@@ -1120,7 +1112,6 @@
   .process-image { position: static; height: 320px; }
   .faq-inner { grid-template-columns: 1fr; gap: 48px; }
   .faq-image-main { height: 300px; }
-
   .service-card { flex: 0 0 calc(50% - 10px); }
   .product-card { flex: 0 0 calc(50% - 10px); }
   .testi-card { flex: 0 0 calc(50% - 10px); }
@@ -1137,12 +1128,57 @@
   .contact-strip-divider { display: none; }
   .slider-head { flex-direction: column; align-items: flex-start; }
 
-  .service-card { flex: 0 0 78vw; max-width: 300px; }
-  .product-card { flex: 0 0 78vw; max-width: 300px; }
-  .testi-card { flex: 0 0 82vw; max-width: 320px; }
+  .service-card {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .service-card-img {
+    height: 220px;
+  }
+
+  .product-card {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .testi-card {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+
+  .cta-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .cta-actions .btn-hero-primary,
+  .cta-actions .btn-hero-outline {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    font-size: 0.82rem;
+    padding: 11px 16px;
+  }
 }
 
 @media (max-width: 600px) {
   .hero-desc { display: none; }
   .hero-title { font-size: 2rem; }
+}
+
+@media (max-width: 380px) {
+  .cta-actions .btn-hero-primary,
+  .cta-actions .btn-hero-outline {
+    font-size: 0.76rem;
+    padding: 10px 12px;
+  }
 }
