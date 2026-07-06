@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -132,6 +137,7 @@
   padding: 40px 0;
   position: relative;
   overflow: hidden;
+  overflow-x: hidden;
 }
 
 .stats-strip-inner {
@@ -269,6 +275,7 @@
 
 .slider-section {
   padding: 96px 0 80px;
+  overflow-x: hidden;
 }
 
 .slider-section.bg-white { background: var(--white); }
@@ -422,7 +429,7 @@
 .service-card-img img {
   width: 100%;
   height: 100%;
-  object-fit:cover ;
+  object-fit: cover;
   object-position: bottom;
   opacity: 0.92;
   transition: transform 0.5s ease, opacity 0.4s ease;
@@ -465,6 +472,7 @@
 .about {
   background: var(--green-dark);
   padding: 100px 0;
+  overflow-x: hidden;
 }
 
 .about-inner {
@@ -1004,6 +1012,7 @@
   background-repeat: repeat;
   background-size: 300px;
   padding: 48px 0;
+  overflow-x: hidden;
 }
 
 .contact-strip-inner {
@@ -1062,6 +1071,7 @@
   background: var(--green-dark);
   position: relative;
   overflow: hidden;
+  overflow-x: hidden;
   text-align: center;
 }
 
